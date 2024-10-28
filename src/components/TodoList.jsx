@@ -1,8 +1,8 @@
-import { useTodos } from "../context/TodoContext";
+import { useTodoContext } from "../context/TodoContext";
 import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-  const { todos, clearTodos } = useTodos();
+  const { todos, clearTodos } = useTodoContext();
 
   return (
     <div>

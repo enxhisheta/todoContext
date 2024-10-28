@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 
 const TodoContext = createContext();
 
-const useTodos = () => useContext(TodoContext);
+const useTodoContext = () => useContext(TodoContext);
 
 export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
@@ -28,4 +28,4 @@ export const TodoProvider = ({ children }) => {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export { useTodos };
+export { useTodoContext };

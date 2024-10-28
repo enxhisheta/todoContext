@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useTodos } from "../context/TodoContext";
+import { useTodoContext } from "../context/TodoContext";
 
 const TodoItem = ({ todo }) => {
-  const { deleteTodo } = useTodos();
+  const { deleteTodo } = useTodoContext();
 
   return (
     <li>

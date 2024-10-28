@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useTodos } from "../context/TodoContext";
+import { useTodoContext } from "../context/TodoContext";
 
 const TodoInput = () => {
   const [text, setText] = useState("");
-  const { addTodo } = useTodos();
+  const { addTodo } = useTodoContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
