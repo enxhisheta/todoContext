@@ -1,26 +1,23 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { useTodoContext } from "../context/TodoContext";
 
 const TodoInput = () => {
-  const [text, setText] = useState("");
+  const inputRef = useRef("");
   const { addTodo } = useTodoContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (text.trim()) {
+    const text = inputRef.current.value.trim();
+    if (text) {
       addTodo(text);
-      setText("");
+      inputRef.current.value = "";
+      console.log("Todo re-render");
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Add a new task"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
+      <input type="text" placeholder="Add a new task" ref={inputRef} />
       <button type="submit">Add</button>
     </form>
   );
