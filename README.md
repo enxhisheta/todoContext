@@ -20,3 +20,10 @@ note : ignore consumer
 ### Task 1
 
 Todo List
+
+# Custom hooks
+
+support reusable logic
+*eager return: return value is available immediately.
+*lazy return: return value is available only after the hook is called
+\*debouncing: delaying the execution of a function until a certain amount of time has passed since the last time the function was called(custom hook)
