@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import TranslatePage from "./pages/TranslatePage";
 import TodoListPage from "./pages/TodoListPage";
+import TranslatePage from "./pages/TranslatePage";
 
 const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<TranslatePage />} />
-    <Route path="/todo" element={<TodoListPage />} />
+    <Route path="/" element={<TodoListPage />} />
+    <Route path="/translating" element={<TranslatePage />} />
   </Routes>
 );
 

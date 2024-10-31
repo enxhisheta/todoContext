@@ -1,14 +1,11 @@
 import "./index.css";
-import TranslatePage from "./pages/TranslatePage";
-import { TranslatingProvider } from "./context/TranslatingContext";
+import TodoListPage from "./pages/TodoListPage";
 
 const App = () => {
   return (
-    <TranslatingProvider>
-      <div className="App">
-        <TranslatePage />
-      </div>
-    </TranslatingProvider>
+    <div>
+      <TodoListPage />
+    </div>
   );
 };
 
